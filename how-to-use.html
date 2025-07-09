@@ -65,11 +65,11 @@
             <p class="text-gray-700 text-lg mb-4">
                 Once the Terminal window is open, copy and paste the following command and press <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">Enter</code>:
             </p>
-            <div class="relative">
+            <div class="relative group">
                 <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-x-auto mb-6">
                     <pre><code id="howToUseCode" class="language-bash">bash &lt;(curl -s https://raw.githubusercontent.com/OceanBlue010/MacOs-Multi-Instance/refs/heads/main/multi-instance)</code></pre>
                 </div>
-                <button onclick="copyCode('howToUseCode', this)" class="absolute top-2 right-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold py-1 px-3 rounded-md transition duration-300 ease-in-out">
+                <button onclick="copyCode('howToUseCode', this)" class="absolute top-2 right-2 bg-blue-500 hover:bg-blue-600 text-white text-xs font-semibold py-1 px-2 rounded-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out">
                     Copy
                 </button>
             </div>
