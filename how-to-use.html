@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>How to Use - Roblox Multi-Instance Launcher</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -31,6 +34,7 @@
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-4">
     <div class="max-w-4xl w-full bg-white shadow-lg rounded-xl p-8 md:p-12 my-8">
+        <!-- Navigation Bar -->
         <nav class="mb-10 p-4 bg-blue-600 text-white rounded-lg shadow-md flex justify-center space-x-8">
             <a href="index.html" class="text-lg font-semibold hover:text-blue-200 transition duration-300 ease-in-out">Home</a>
             <a href="how-to-use.html" class="text-lg font-semibold hover:text-blue-200 transition duration-300 ease-in-out">How to Use</a>
@@ -61,8 +65,13 @@
             <p class="text-gray-700 text-lg mb-4">
                 Once the Terminal window is open, copy and paste the following command and press <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">Enter</code>:
             </p>
-            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-x-auto mb-6">
-                <pre><code class="language-bash">bash &lt;(curl -s https://raw.githubusercontent.com/OceanBlue010/MacOs-Multi-Instance/refs/heads/main/multi-instance)</code></pre>
+            <div class="relative">
+                <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-x-auto mb-6">
+                    <pre><code id="howToUseCode" class="language-bash">bash &lt;(curl -s https://raw.githubusercontent.com/OceanBlue010/MacOs-Multi-Instance/refs/heads/main/multi-instance)</code></pre>
+                </div>
+                <button onclick="copyCode('howToUseCode', this)" class="absolute top-2 right-2 bg-blue-500 hover:bg-blue-600 text-white text-sm font-semibold py-1 px-3 rounded-md transition duration-300 ease-in-out">
+                    Copy
+                </button>
             </div>
             <p class="text-gray-700 text-lg">
                 This command uses <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">curl</code> to download the script from GitHub and then pipes it directly to <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">bash</code> for execution. No files are saved to your computer permanently unless you choose to do so.
@@ -125,9 +134,9 @@
                     </p>
                 </li>
                 <li>
-                    <span class="font-semibold text-red-600">Script doesn't respond:</span>
+                    <span class="font-semibold text-red-600">Script hangs or doesn't respond:</span>
                     <p class="ml-5 mt-2">
-                        Run the script again, and if it persist then may be an issue to wifi, reconnect to wifi or if you already have reach out to me to figure out about the issue.
+                        This could be due to network issues preventing the <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">curl</code> command from downloading the script. Check your internet connection. If the issue persists, try running the command again.
                     </p>
                 </li>
                 <li>
@@ -144,6 +153,7 @@
         <p>&copy; 2025 Roblox Multi-Instance Launcher. All rights reserved.</p>
     </footer>
 
+    <!-- Custom JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
