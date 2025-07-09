@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Use - Roblox Multi-Instance Launcher</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="max-w-4xl w-full bg-white shadow-lg rounded-xl p-8 md:p-12 my-8">
+        <nav class="mb-10 p-4 bg-blue-600 text-white rounded-lg shadow-md flex justify-center space-x-8">
+            <a href="index.html" class="text-lg font-semibold hover:text-blue-200 transition duration-300 ease-in-out">Home</a>
+            <a href="how-to-use.html" class="text-lg font-semibold hover:text-blue-200 transition duration-300 ease-in-out">How to Use</a>
+        </nav>
+
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                How to Use the Roblox Multi-Instance Launcher
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600">
+                A detailed guide to getting your multi-instance setup running.
+            </p>
+        </header>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">
+                Running the Script
+            </h2>
+            <p class="text-gray-700 text-lg mb-4">
+                The easiest way to use the Roblox Multi-Instance Launcher is to run it directly from its GitHub source. This ensures you always have the latest version.
+            </p>
+            <p class="text-gray-700 text-lg mb-4">
+                It's important to note that this script does not install any software on your system; it simply automates the process of opening multiple Roblox instances that are already installed.
+            </p>
+            <p class="text-gray-700 text-lg mb-4">
+                Open your macOS <span class="font-semibold text-blue-600">Terminal</span> application. You can find it by searching in Spotlight (Cmd + Space and type "Terminal") or by navigating to <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">Applications > Utilities > Terminal</code>.
+            </p>
+            <p class="text-gray-700 text-lg mb-4">
+                Once the Terminal window is open, copy and paste the following command and press <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">Enter</code>:
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-x-auto mb-6">
+                <pre><code class="language-bash">bash &lt;(curl -s https://raw.githubusercontent.com/OceanBlue010/MacOs-Multi-Instance/refs/heads/main/multi-instance)</code></pre>
+            </div>
+            <p class="text-gray-700 text-lg">
+                This command uses <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">curl</code> to download the script from GitHub and then pipes it directly to <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">bash</code> for execution. No files are saved to your computer permanently unless you choose to do so.
+            </p>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">
+                Understanding the Prompts
+            </h2>
+            <p class="text-gray-700 text-lg mb-4">
+                After executing the command, the script will interact with you through a series of prompts in the Terminal:
+            </p>
+            <ul class="list-disc list-inside space-y-4 text-gray-700 text-lg">
+                <li>
+                    <span class="font-semibold text-blue-600">Prompt 1: "How many Roblox instances do you want to open (1-9)?"</span>
+                    <p class="ml-5 mt-2">
+                        Enter a single digit number between <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">1</code> and <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">9</code>. This number determines how many separate Roblox windows the script will attempt to open.
+                        If you enter a number outside this range or non-numeric input, the script will typically ask you to re-enter a valid number.
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold text-blue-600">Prompt 2: "Do you want to open [X] Roblox instances, each in a new terminal window? (y/n):"</span>
+                    <p class="ml-5 mt-2">
+                        This is a confirmation step. The script will display the number of instances you chose in the previous step (represented by <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">[X]</code>).
+                        Type <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">y</code> (for yes) and press <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">Enter</code> to proceed with launching the instances.
+                        If you type <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">n</code> (for no) and press <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">Enter</code>, the script will exit without opening any Roblox instances.
+                    </p>
+                </li>
+            </ul>
+            <p class="text-gray-700 text-lg mt-4">
+                After your confirmation, the script will begin launching each Roblox instance. It introduces a 10-second pause between each launch to prevent overwhelming your system and ensure each instance initializes correctly.
+            </p>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">
+                What the Script Does (Briefly)
+            </h2>
+            <p class="text-gray-700 text-lg mb-4">
+                The script primarily uses the macOS <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">open</code> command with the <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">-na</code> (new application) flag. This flag tells macOS to open a *new instance* of the application, even if one is already running. By repeating this command for the number of instances you specify, it effectively bypasses Roblox's single-instance limitation on macOS. Each instance is launched in its own dedicated Terminal window for better management and isolation.
+            </p>
+        </section>
+
+        <section>
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-red-500 pb-2">
+                Troubleshooting
+            </h2>
+            <ul class="list-disc list-inside space-y-4 text-gray-700 text-lg">
+                <li>
+                    <span class="font-semibold text-red-600">"Roblox not found" or script fails to launch instances:</span>
+                    <p class="ml-5 mt-2">
+                        Ensure that Roblox Player is installed in your <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">/Applications</code> folder. The script specifically looks for the executable at <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">/Applications/Roblox.app/Contents/MacOS/RobloxPlayer</code>. If you've installed Roblox elsewhere, or if the application structure has changed, the script might not find it. Reinstalling Roblox to the default location usually resolves this.
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold text-red-600">Terminal windows close immediately:</span>
+                    <p class="ml-5 mt-2">
+                        If the Terminal windows open and then instantly close, it might indicate an issue with the Roblox application itself or a permission problem. Try launching Roblox normally first to ensure it functions correctly. Also, ensure your Terminal application has the necessary permissions (though this is rare for basic script execution).
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold text-red-600">Script hangs or doesn't respond:</span>
+                    <p class="ml-5 mt-2">
+                        This could be due to network issues preventing the <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">curl</code> command from downloading the script. Check your internet connection. If the issue persists, try running the command again.
+                    </p>
+                </li>
+                <li>
+                    <span class="font-semibold text-red-600">Instances don't log in correctly:</span>
+                    <p class="ml-5 mt-2">
+                        The script launches the Roblox application. Managing separate accounts within each instance is a manual process. You will need to sign in and out within each Roblox window as needed to switch accounts. The script does not handle account management.
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="w-full text-center py-6 text-gray-500 text-sm">
+        <p>&copy; 2025 Roblox Multi-Instance Launcher. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Multi-Instance Launcher for macOS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #e0e0e0;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+    <div class="max-w-4xl w-full bg-white shadow-lg rounded-xl p-8 md:p-12 my-8">
+        <nav class="mb-10 p-4 bg-blue-600 text-white rounded-lg shadow-md flex justify-center space-x-8">
+            <a href="index.html" class="text-lg font-semibold hover:text-blue-200 transition duration-300 ease-in-out">Home</a>
+            <a href="how-to-use.html" class="text-lg font-semibold hover:text-blue-200 transition duration-300 ease-in-out">How to Use</a>
+        </nav>
+
+        <header class="text-center mb-10">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-4 leading-tight">
+                Roblox Multi-Instance Launcher for macOS
+            </h1>
+            <p class="text-lg md:text-xl text-gray-600">
+                This script allows you to launch multiple instances of Roblox on macOS, each in its own separate terminal window.
+            </p>
+        </header>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">
+                Features
+            </h2>
+            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg">
+                <li>
+                    <span class="font-semibold text-blue-600">Multi-Instance Launch:</span> Opens multiple Roblox instances.
+                </li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">
+                Prerequisites
+            </h2>
+            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg">
+                <li>
+                    <span class="font-semibold text-blue-600">macOS:</span> This script is specifically designed for macOS.
+                </li>
+                <li>
+                    <span class="font-semibold text-blue-600">Roblox Player:</span> Ensure Roblox is installed in your <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">/Applications</code> folder. The script expects the executable at <code class="bg-gray-100 p-1 rounded-md text-sm font-mono text-red-600">/Applications/Roblox.app/Contents/MacOS/RobloxPlayer</code>.
+                </li>
+                <li>
+                    <span class="font-semibold text-blue-600">Terminal Access:</span> You will need to run this script from your macOS Terminal application.
+                </li>
+            </ul>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">
+                Quick Start
+            </h2>
+            <p class="text-gray-700 text-lg mb-4">
+                To run the script directly from GitHub, open your macOS Terminal application and execute the following command:
+            </p>
+            <div class="bg-gray-900 text-white p-4 rounded-lg shadow-md overflow-x-auto mb-6">
+                <pre><code class="language-bash">bash &lt;(curl -s https://raw.githubusercontent.com/OceanBlue010/MacOs-Multi-Instance/refs/heads/main/multi-instance)</code></pre>
+            </div>
+            <p class="text-gray-700 text-lg">
+                For detailed instructions on how to use the script, including prompts and troubleshooting, please visit the <a href="how-to-use.html" class="text-blue-600 hover:underline font-semibold">How to Use</a> page.
+            </p>
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 border-b-2 border-blue-500 pb-2">
+                Important Reminders
+            </h2>
+            <ul class="list-disc list-inside space-y-3 text-gray-700 text-lg">
+                <li>
+                    <span class="font-semibold text-red-600">Do NOT close</span> the terminal windows where Roblox instances are running, or the Roblox instance associated with that terminal will close.
+                </li>
+                <li>
+                    To use separate accounts for each instance, you will need to manually sign in and sign out within each Roblox instance as needed.
+                </li>
+            </ul>
+        </section>
+    </div>
+
+    <footer class="w-full text-center py-6 text-gray-500 text-sm">
+        <p>&copy; 2025 Roblox Multi-Instance Launcher. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

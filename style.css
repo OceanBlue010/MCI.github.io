@@ -1,0 +1,18 @@
+/*
+ * style.css
+ *
+ * This file is intentionally minimal as Tailwind CSS handles most of the styling.
+ * Add any custom CSS here that cannot be achieved directly with Tailwind utility classes.
+ */
+
+/* Example: If you wanted to add a specific animation or more complex custom style */
+/*
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in-element {
+    animation: fadeIn 1s ease-out;
+}
+*/
